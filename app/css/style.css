@@ -169,8 +169,7 @@ a, button, input[type="submit"] {
 
 body {
   font-family: 'Roboto', sans-serif;
-  background: -o-linear-gradient(135deg, #e1e1e1, #f1f1f1);
-  background: linear-gradient(-45deg, #e1e1e1, #f1f1f1);
+  background: #eeeeee;
   font-weight: 500;
   min-height: 100%;
 }
