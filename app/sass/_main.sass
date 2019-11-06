@@ -1,0 +1,110 @@
+@mixin button
+  background: #333333
+  color: #ffffff
+  line-height: 40px
+
+$button-color: #3a3897
+
+body
+  font-family: 'Roboto', sans-serif
+  background: linear-gradient(-45deg, #e1e1e1, #f1f1f1)
+  font-weight: 500
+  min-height: 100%
+
+.container
+  min-width: 1400px
+  padding: 0
+
+.adaptive
+
+  &-top
+    @include flex
+    align-items: flex-start
+    padding: 20px 0
+
+  &-form
+    position: relative
+    @include flex
+    margin-right: 20px
+
+    &__input
+      width: 500px
+      line-height: 38px
+      border: 1px solid #cccccc
+      border-right: 0
+      padding: 0 100px 0 15px
+      border-radius: 5px 0 0 5px
+
+    &__button
+      line-height: 40px
+      padding: 0 15px
+      border-radius: 0 5px 5px 0
+      @include button
+
+      &:hover
+        background: $button-color
+
+  &-controls
+    @include flex
+    align-items: flex-start
+
+  &__control
+    padding: 0 15px
+    margin-right: 20px
+    border-radius: 5px
+    height: 40px
+    @include button
+
+    &:last-child
+      margin-right: 0
+
+    &:hover, &.active
+      background: $button-color
+
+  &-bottom
+    @include flex
+    align-items: flex-start
+    padding-bottom: 20px
+
+  &-resolutions
+    @include flex
+    flex-direction: column
+    margin-right: 20px
+    box-shadow: 0 0 5px #dddddd
+
+  &__resolution
+    @include button
+    width: 100px
+    text-align: center
+    line-height: 44px
+
+    &:hover, &.active
+      background: $button-color
+
+    &:first-child
+      border-radius: 5px 5px 0 0
+
+    &:last-child
+      border-radius: 0 0 5px 5px
+
+iframe
+  width: 1280px
+  height: 800px
+  background: #ffffff
+  box-shadow: 0 0 5px #dddddd
+  transition: .2s linear
+
+button
+  @include flex
+  align-items: center
+  justify-content: center
+
+  &:disabled
+    background: rgba(#000000, .2) !important
+    cursor: auto
+
+    &:hover
+      background: rgba(#000000, .2) !important
+
+  img
+    height: 16px

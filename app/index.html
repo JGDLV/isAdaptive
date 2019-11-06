@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="utf-8">
+	<title>isAdaptive - Проверка адаптивности сайта</title>
+	<meta name="description" content="Здесь вы можете проверить, адаптирован ли ваш сайт (и насколько хорошо) под мобильные устройства.">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap&subset=cyrillic-ext" rel="stylesheet">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+	<div class="adaptive">
+		<div class="container">
+			<div class="adaptive-top">
+				<form class="adaptive-form">
+					<input class="adaptive-form__input" type="text" autofocus required placeholder="Введите URL">
+					<button class="adaptive-form__button" type="submit"><img src="img/submit.svg" alt=""></button>
+				</form>
+				<div class="adaptive-controls">
+					<button class="adaptive__control adaptive__control_reload" disabled><img src="img/reload.svg" alt=""></button>
+					<button class="adaptive__control adaptive__control_reverse" disabled>Перевернуть девайс</button>
+					<button class="adaptive__control adaptive__control_scrolling" disabled>Отключить прокрутку</button>
+				</div>
+			</div>
+			<div class="adaptive-bottom">
+				<div class="adaptive-resolutions"></div>
+				<iframe style="display: none;"></iframe>
+			</div>
+		</div>
+	</div>
+	<script src="js/libs.min.js"></script>
+	<script src="js/scripts.js"></script>
+</body>
+
+</html>
