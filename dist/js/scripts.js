@@ -63,7 +63,7 @@ resolutionsBlock.addEventListener('click', event => {
     iframe.style.width = event.target.dataset.width + 'px'
     iframe.style.height = event.target.dataset.height + 'px'
     if (reload.classList.contains('active')) {
-      iframeSrc()
+      setTimeout(iframeSrc, 500)
     }
   }
 })
@@ -82,6 +82,7 @@ reverse.addEventListener('click', function () {
   let height = iframe.offsetHeight
   iframe.style.width = height + 'px'
   iframe.style.height = width + 'px'
+  setTimeout(iframeSrc, 500)
 })
 
 scrolling.addEventListener('click', function () {
