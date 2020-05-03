@@ -19,13 +19,13 @@ body
 .adaptive
 
   &-top
-    @include flex
+    +flex
     align-items: flex-start
     padding: 20px 0
 
   &-form
     position: relative
-    @include flex
+    +flex
     margin-right: 20px
 
     &__input
@@ -40,21 +40,54 @@ body
       line-height: 40px
       padding: 0 15px
       border-radius: 0 5px 5px 0
-      @include button
+      +button
 
       &:hover
         background: $button-color
 
   &-controls
-    @include flex
+    +flex
     align-items: flex-start
 
   &__control
     padding: 0 15px
-    margin-right: 20px
+    // margin-right: 20px
     border-radius: 5px
     height: 40px
-    @include button
+    +button
+
+    &-wrap
+      margin-right: 20px
+      position: relative
+
+      &:hover .adaptive__control-info
+        display: block
+
+    &-info
+      position: absolute
+      background: rgba(#000, .8)
+      color: #ffffff
+      padding: 15px
+      width: 350px
+      text-align: center
+      top: calc(100% + 20px)
+      left: 50%
+      transform: translateX(-50%)
+      border-radius: 7px
+      pointer-events: none
+      display: none
+      line-height: 1.4
+
+      &::before
+        +pseudo
+        width: 0
+        height: 0
+        border-style: solid
+        border-width: 0 10px 10px 10px
+        border-color: transparent transparent rgba(#000, .8) transparent
+        left: 50%
+        transform: translateX(-50%)
+        top: -10px
 
     &:last-child
       margin-right: 0
@@ -63,18 +96,18 @@ body
       background: $button-color
 
   &-bottom
-    @include flex
+    +flex
     align-items: flex-start
     padding-bottom: 20px
 
   &-resolutions
-    @include flex
+    +flex
     flex-direction: column
     margin-right: 20px
     box-shadow: 0 0 5px #dddddd
 
   &__resolution
-    @include button
+    +button
     width: 100px
     text-align: center
     line-height: 44px
@@ -96,7 +129,7 @@ iframe
   transition: .2s linear
 
 button
-  @include flex
+  +flex
   align-items: center
   justify-content: center
 

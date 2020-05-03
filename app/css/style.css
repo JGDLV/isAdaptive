@@ -244,12 +244,55 @@ body {
 
 .adaptive__control {
   padding: 0 15px;
-  margin-right: 20px;
   border-radius: 5px;
   height: 40px;
   background: #333333;
   color: #ffffff;
   line-height: 40px;
+}
+
+.adaptive__control-wrap {
+  margin-right: 20px;
+  position: relative;
+}
+
+.adaptive__control-wrap:hover .adaptive__control-info {
+  display: block;
+}
+
+.adaptive__control-info {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  padding: 15px;
+  width: 350px;
+  text-align: center;
+  top: -webkit-calc(100% + 20px);
+  top: calc(100% + 20px);
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 7px;
+  pointer-events: none;
+  display: none;
+  line-height: 1.4;
+}
+
+.adaptive__control-info::before {
+  position: absolute;
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 10px 10px 10px;
+  border-color: transparent transparent rgba(0, 0, 0, 0.8) transparent;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  top: -10px;
 }
 
 .adaptive__control:last-child {
